@@ -43,7 +43,7 @@ const EmailFetcher: React.FC = () => {
 
     try {
       const openaiToken = localStorage.getItem('openai_token') || '';
-      const { data: classifiedEmails } = await axios.post('/api/classify-emails', {
+      const { data: classifiedEmails } = await axios.post('/api/classifyEmails', {
         emails,
         openaiToken,
       });
